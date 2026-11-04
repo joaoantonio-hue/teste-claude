@@ -114,7 +114,7 @@ Referências de caso: `plano-de-testes-crm.md`. Rodada anterior: `resultado-roda
 
 - **Configuração incompleta no sandbox:**
   - Chance de fechamento vazia em todas as etapas, então a previsão aparece "—".
-  - Dias de alerta (amarelo/vermelho), SLA e horário comercial vazios em Regras.
+  - SLA e horário comercial vazios em Regras. (Correção na rodada 3: os dias de alerta estão preenchidos com 2 e 5; a leitura anterior estava errada.)
   - Nenhum produto vinculado a funil (causa da F2 e da lista de produtos sem filtro).
   - Nenhuma etiqueta e nenhum pitch cadastrados.
 - **Desempenho:** Negociações, Lista e Contatos levam cerca de 6,5 s para carregar por completo; Relatórios, cerca de 4,3 s.
