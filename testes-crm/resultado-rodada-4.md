@@ -37,16 +37,22 @@ Data: 09/11/2026 · Ambiente: sandbox · Execução automatizada (Playwright).
 
 **Relatórios → "Tarefas por status" (Este mês):** "Criadas" conta pela data de criação, enquanto "Atrasadas" conta pela data de vencimento. Uma tarefa criada hoje e vencida em outubro entra em Criadas, mas não em Atrasadas. Vale definir um critério só.
 
-## A2 (resumo da manhã)
+## A2 (resumo da manhã) — conferido em 10/11/2026
 
-A carteira do Teste CRM Vendedor foi montada hoje com estado conhecido. Esperado no resumo de 10/11:
-- 1 negociação sem próxima tarefa ("TESTE-QA R4 Sem tarefa");
-- 2 tarefas atrasadas ("atrasada 3d" e "atrasada 20d");
-- 1 tarefa de hoje ("amanha", 10/11 às 10:00).
+**Resultado: OK.**
 
-Conferência agendada para 10/11, 10:30 (horário de Brasília). O resultado entra aqui depois.
+A carteira do Teste CRM Vendedor foi montada em 09/11 com tarefas e negociações em datas conhecidas.
 
-## Dados que ficaram até a conferência
+| Notificação de 10/11 (de manhã) | Situação real | Link abre |
+|---|---|---|
+| "1 tarefa para hoje e 3 tarefas atrasadas" | **Correto.** Hoje: "amanha" (10/11, 10:00). Atrasadas: "atrasada 20d", "atrasada 3d" e "hoje" (09/11, 23:00, que venceu de madrugada). A previsão anotada na rodada 4 dizia 2 atrasadas porque esqueci esta última | `/crm/tarefas?status=overdue`, com as tarefas certas |
+| "1 negociação sem próxima tarefa" | **Correto:** "TESTE-QA R4 Sem tarefa" | `/crm/negociacoes?vista=lista&alerta=sem-tarefa`, só com ela |
 
-- Contato "TESTE-QA R4" e as negociações "TESTE-QA R4 Com tarefa", "Sem tarefa" e "Perda", com as tarefas TESTE-QA. Serão excluídos depois do A2.
-- Motivo "TESTE-QA motivo": desativado. Não dá para apagar, só desativar.
+O resumo do dia anterior (09/11, à tarde) também batia: 1 tarefa para hoje e 2 atrasadas.
+
+**Observação:** o link do resumo de tarefas abre só o filtro "Atrasadas". A tarefa de hoje só aparece nele porque, na hora em que a lista foi aberta (10:31), ela também já tinha vencido. Vale o link abrir "hoje + atrasadas".
+
+## Limpeza
+
+- Negociações "TESTE-QA R4" (3), as tarefas delas e o contato "TESTE-QA R4": excluídos.
+- Motivo "TESTE-QA motivo": desativado. O sistema não permite apagar.
